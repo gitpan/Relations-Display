@@ -1,6 +1,6 @@
 NAME
 
-  Relations::Display v0.90
+  Relations::Display v0.91
 
 DESCRIPTION
 
@@ -22,17 +22,17 @@ INSTALlATION
     perl 5.004
     DBI >= 1.13
     DBD::mysql >= 1.18
-    Relations >= 0.93
-    Relations::Query >= 0.92
-    Relations::Abstract >= 0.93
+    Relations >= 0.95
+    Relations::Query >= 0.93
+    Relations::Abstract >= 0.94
 
-  WIN32 (Relations-Display-0.90.zip)
+  WIN32 (Relations-Display-0.91.zip)
 
     Extract zip file into a directory and type
 
     ppm install Relations-Display.ppd
 
-  UN*X (Relations-Display-0.90.tar.gz)
+  UN*X (Relations-Display-0.91.tar.gz)
 
     Extract bundle into a directory and type
 

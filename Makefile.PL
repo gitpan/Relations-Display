@@ -7,16 +7,16 @@ WriteMakefile(
   ($] ge '5.005') ? 
   (
     'AUTHOR'   => 'George A. Fitch III (aka Gaffer), gaf3@gaf3.com',
-    'ABSTRACT' => 'Generate GD::Graphs from DBI/DBD::mysql queries',
+    'ABSTRACT' => 'DBI/DBD::mysql query graphing module',
   ) : (),
   'PREREQ_PM' => 
   { 
     'DBI'                 => 1.13,
     'DBD::mysql'          => 1.18,
     'GD::Graph'           => 1.30,
-    'Relations'           => 0.93,
-    'Relations::Query'    => 0.92,
-    'Relations::Abstract' => 0.93,
+    'Relations'           => 0.95,
+    'Relations::Query'    => 0.93,
+    'Relations::Abstract' => 0.94,
   },
   'PM' => {
      'Display.pm'       => '$(INST_LIBDIR)/Display.pm',
