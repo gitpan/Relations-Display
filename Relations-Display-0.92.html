@@ -6,21 +6,6 @@
 
 <BODY>
 
-  <!-- beginning of leaf header-->
-
-  <TABLE border=0  cellpadding=0 cellspacing=0 width=100%>
-  <TR>
-    <TD valign=middle width='100%'
-    bgcolor='#cc0066'> <font face='sans-serif' size='+1'
-    color='#ff99cc'>&nbsp;&nbsp;&nbsp;Relations::Display - DBI/DBD::mysql query graphing module</font>
-    </TD>
-  </TR>
-  </TABLE>
-  <p>&nbsp</p>
-  <!-- end of leaf content-->
-  
-
-
 <A NAME="__index__"></A>
 <!-- INDEX BEGIN -->
 
@@ -60,6 +45,7 @@
 	<LI><A HREF="#change log">CHANGE LOG</A></LI>
 	<UL>
 
+		<LI><A HREF="#relationsdisplay0.92">Relations-Display-0.92</A></LI>
 		<LI><A HREF="#relationsdisplay0.91">Relations-Display-0.91</A></LI>
 	</UL>
 
@@ -159,7 +145,7 @@
 from MySQL queries.</P>
 <P>The current version of Relations::Display is available at</P>
 <PRE>
-  <A HREF="http://www.gaf3.com">http://www.gaf3.com</A></PRE>
+  <A HREF="http://relations.sourceforge.net">http://relations.sourceforge.net</A></PRE>
 <P>
 <HR>
 <H1><A NAME="description">DESCRIPTION</A></H1>
@@ -613,6 +599,12 @@ $table-&gt;{y_axis_values}-&gt;{$x_axis_value}{$legend_value}</P>
 <HR>
 <H1><A NAME="change log">CHANGE LOG</A></H1>
 <P>
+<H2><A NAME="relationsdisplay0.92">Relations-Display-0.92</A></H2>
+<P><STRONG>Fixed X Axis and Legend Evals</STRONG></P>
+<P>Fixed a problem with x axis and legend field values. Any field
+names that contained spaces would have their values show up as 
+blank in the Graph and Table. That's fixed now.</P>
+<P>
 <H2><A NAME="relationsdisplay0.91">Relations-Display-0.91</A></H2>
 <P><STRONG>Added Argument Cloning</STRONG></P>
 <P>Instead of just grabbing sent array refs, hash refs, queries and such,
@@ -632,8 +624,8 @@ better to do it now rather than later.</P>
 <H1><A NAME="to do">TO DO</A></H1>
 <P><STRONG>Improve Error Checking</STRONG></P>
 <P>Add some warnings if fields specified in various arguments are not
-present in the matrix data returned from the query.</P>
-<P><STRONG>Add To Text Functionality</STRONG></P>
+present in the matrix data returned from the query. 
+<STRONG>Add To Text Functionality</STRONG></P>
 <P>Add a <CODE>to_text()</CODE> function to both Relations::Display and 
 Relations::Display::Table. This will make it easier to debug.</P>
 <P><STRONG>Pass -w</STRONG></P>
@@ -697,19 +689,6 @@ so that one can switch application languages seamlessly. That's the goal
 of Relations-Structure A standard so that Relations objects can 
 export/import their configuration through XML.</P>
 
-
-    <!-- beginning of leaf footer-->
-    <p>&nbsp;</p>
-    <TABLE border=0  cellpadding=0 cellspacing=0 width=100%>
-    <TR>
-      <TD valign=middle
-        bgcolor='#cc0066'> <font face='sans-serif' size='+1'
-        color='#ff99cc'>&nbsp;&nbsp;&nbsp;Relations::Display - DBI/DBD::mysql query graphing module</font>
-      </TD>
-    </TR>
-    </TABLE>
-    <!-- end of leaf footer-->
-  
 </BODY>
 
 </HTML>

@@ -1,6 +1,6 @@
 NAME
 
-  Relations::Display v0.91
+  Relations::Display v0.92
 
 DESCRIPTION
 
@@ -26,13 +26,13 @@ INSTALlATION
     Relations::Query >= 0.93
     Relations::Abstract >= 0.94
 
-  WIN32 (Relations-Display-0.91.zip)
+  WIN32 (Relations-Display-0.92.zip)
 
     Extract zip file into a directory and type
 
     ppm install Relations-Display.ppd
 
-  UN*X (Relations-Display-0.91.tar.gz)
+  UN*X (Relations-Display-0.92.tar.gz)
 
     Extract bundle into a directory and type
 

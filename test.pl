@@ -555,7 +555,7 @@ $dsp = new Relations::Display(-query      => {-select   => {total  => "count(*)"
                                                             second => "'Count'",
                                                             third  => "if(gender='Male','Boy','Girl')",
                                                             tao    => "if(gender='Male','Yang','Yin')",
-                                                            sex    => "gender",
+                                                            "'sex type'" => "gender",
                                                             kind   => "sp_name",
                                                             id     => "species.sp_id",
                                                             fourth => "(species.sp_id+50)",
@@ -569,7 +569,7 @@ $dsp = new Relations::Display(-query      => {-select   => {total  => "count(*)"
                               -abstract   => $abs,
                               -prefix     => 'Whup',
                               -x_axis     => 'first,kind,id,fourth',
-                              -legend     => 'second,third,tao,sex,vert,horiz',
+                              -legend     => 'second,third,tao,sex type,vert,horiz',
                               -y_axis     => 'total',
                               -hide       => 'fourth,third,vert,horiz',
                               -vertical   => 'vert',
@@ -580,7 +580,7 @@ $tbl = $dsp->get_table();
 die "Display auto get_table failed" unless (($tbl->{title} eq 'Whup - Bird - Count') and
                                             ($tbl->{x_label} eq 'kind - id') and
                                             ($tbl->{y_label} eq 'total') and
-                                            ($tbl->{legend_label} eq 'tao - sex') and
+                                            ($tbl->{legend_label} eq 'tao - sex type') and
                                             ($tbl->{x_axis_values}->[0] eq 'Blue Jay - 1 - 51') and
                                             ($tbl->{x_axis_values}->[1] eq 'Robin - 2 - 52') and
                                             ($tbl->{x_axis_values}->[2] eq 'Sparrow - 3 - 53') and

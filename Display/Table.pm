@@ -15,7 +15,7 @@ use Relations;
 # This program is free software, you can redistribute it and/or modify it under
 # the same terms as Perl istelf
 
-$Relations::Display::Table::VERSION = '0.91';
+$Relations::Display::Table::VERSION = '0.92';
 
 @ISA = qw(Exporter);
 

@@ -26,7 +26,7 @@ use Relations::Display::Table;
 # This program is free software, you can redistribute it and/or modify it under
 # the same terms as Perl istelf
 
-$Relations::Display::VERSION = '0.91';
+$Relations::Display::VERSION = '0.92';
 
 @ISA = qw(Exporter);
 
@@ -553,7 +553,7 @@ sub get_table {
         # Add what will be the field value (through
         # an eval string) to its array.
 
-        push @x_axis_value,"\$row->{$x_axis}";
+        push @x_axis_value,"\$row->{'$x_axis'}";
 
         # Unless the field's to be hidden.
 
@@ -563,7 +563,7 @@ sub get_table {
           # an eval string) to its array, and the field's
           # name to the x axis label.
 
-          push @x_axis_title,"\$row->{$x_axis}";
+          push @x_axis_title,"\$row->{'$x_axis'}";
           push @x_label,$x_axis;
 
         }
@@ -592,7 +592,7 @@ sub get_table {
         # Add what will be the field value (through
         # an eval string) to its array.
 
-        push @legend_value,"\$row->{$legend}";
+        push @legend_value,"\$row->{'$legend'}";
 
         # Unless the field's to be hidden.
 
@@ -602,7 +602,7 @@ sub get_table {
           # an eval string) to its array, and the field's
           # name to the legend label.
 
-          push @legend_title,"\$row->{$legend}";
+          push @legend_title,"\$row->{'$legend'}";
           push @legend_label,$legend;
 
         }
@@ -1174,7 +1174,7 @@ from MySQL queries.
 
 The current version of Relations::Display is available at
 
-  http://www.gaf3.com
+  http://relations.sourceforge.net
 
 =head1 DESCRIPTION
 
@@ -1703,6 +1703,14 @@ $table->{y_axis_values}->{$x_axis_value}{$legend_value}
 
 =head1 CHANGE LOG
 
+=head2 Relations-Display-0.92
+
+B<Fixed X Axis and Legend Evals>
+
+Fixed a problem with x axis and legend field values. Any field
+names that contained spaces would have their values show up as 
+blank in the Graph and Table. That's fixed now.
+
 =head2 Relations-Display-0.91
 
 B<Added Argument Cloning>
@@ -1729,8 +1737,7 @@ better to do it now rather than later.
 B<Improve Error Checking>
 
 Add some warnings if fields specified in various arguments are not
-present in the matrix data returned from the query.
-
+present in the matrix data returned from the query. 
 B<Add To Text Functionality>
 
 Add a to_text() function to both Relations::Display and 
